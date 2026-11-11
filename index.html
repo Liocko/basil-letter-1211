@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fae7dd">
+  <meta name="description" content="Маленькое письмо к нашей годовщине. 12 ноября.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Тебе, с любовью · 12 ноября</title>
+  <link rel="icon" href="assets/heart.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/neucha.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg class="icon-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="heart" viewBox="0 0 24 24"><path d="M20.5 4.8C17.4 1.6 13.9 4 12 6.4 10.1 4 6.6 1.6 3.5 4.8.4 8 3.6 12.8 12 20c8.4-7.2 11.6-12 8.5-15.2Z"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+    <symbol id="back" viewBox="0 0 24 24"><path d="M20 12H5m6-6-6 6 6 6"/></symbol>
+  </svg>
+
+  <div class="page-wrap">
+    <header class="masthead">
+      <a class="wordmark" href="index.html" aria-label="В начало приглашения"><svg aria-hidden="true"><use href="#heart"/></svg>тебе, с любовью</a>
+      <span class="header-date">12 ноября <span class="date-separator">/</span> наш день</span>
+    </header>
+
+    <main class="stationery" id="invitation">
+      <section class="cover" id="cover" aria-labelledby="cover-title">
+        <div class="cover-copy">
+          <h1 id="cover-title">Ты рядом.<br>Даже издалека.</h1>
+          <p class="intro">12 ноября — наша годовщина.<br>И я хочу провести этот день с тобой,<br class="desktop-break"> сколько бы километров ни было между нами.</p>
+          <button class="primary" id="open-letter" aria-controls="letter" aria-expanded="false"><svg aria-hidden="true"><use href="#mail"/></svg>Открыть письмо</button>
+          <span class="small-note">одно маленькое письмо. много любви.</span>
+        </div>
+
+        <div class="illustration-area">
+          <div class="postmark" aria-label="12 ноября, особенная доставка"><span>особенная доставка</span><strong>12.11</strong><span>только для тебя</span></div>
+          <button class="cat-button" id="cat-open" aria-label="Котёнок принёс письмо. Открыть его" aria-controls="letter" aria-expanded="false">
+            <img class="hero-cat" src="assets/basil-flower.png" alt="Basil с розовым цветком" width="1312" height="1199" fetchpriority="high">
+          </button>
+          <div class="delivery-note" aria-hidden="true"><svg viewBox="0 0 80 50"><path d="M72 43C30 48 12 25 18 8m-9 8 9-9 7 10"/></svg><span>доставлено<br>маленькими лапками</span></div>
+        </div>
+      </section>
+
+      <section class="letter" id="letter" aria-labelledby="letter-title" hidden>
+        <button class="text-button back-button" id="close-letter"><svg aria-hidden="true"><use href="#back"/></svg>К конверту</button>
+        <div class="letter-layout">
+          <div class="letter-content">
+            <h2 id="letter-title" tabindex="-1">Любимая,</h2>
+            <p>Я бы хотел сейчас просто оказаться рядом. Обнять тебя и сказать всё это без экрана между нами.</p>
+            <p>Но 12 ноября — наш день. Поэтому давай всё равно проведём его вместе: созвонимся, закажем что-нибудь вкусное и оставим этот вечер только для нас.</p>
+            <p>Можно смотреть фильм. Можно говорить обо всём. Можно просто быть рядом, каждый по свою сторону экрана.</p>
+            <p class="letter-signature">Главное — с тобой.</p>
+            <div class="letter-actions"><button class="primary" id="open-activities">Выбрать, чем займёмся<svg aria-hidden="true"><use href="#arrow"/></svg></button></div>
+          </div>
+          <aside class="letter-illustration"><span class="basil-art basil-art--writing" role="img" aria-label="Basil рисует карандашом"></span></aside>
+        </div>
+      </section>
+
+      <section class="letter activities" id="activities" aria-labelledby="activities-title" hidden>
+        <button class="text-button back-button" id="activities-back"><svg aria-hidden="true"><use href="#back"/></svg>К письму</button>
+        <div class="activities-heading">
+          <div>
+            <h2 id="activities-title" tabindex="-1">Чем займёмся вместе?</h2>
+            <p id="activities-hint">Собери до трёх билетов на 12 ноября. Нажми ещё раз, чтобы вернуть билет.</p>
+          </div>
+          <span class="basil-art basil-art--laptop" role="img" aria-label="Basil у ноутбука"></span>
+        </div>
+        <form id="activities-form">
+          <div class="activity-list" role="group" aria-labelledby="activities-title" aria-describedby="activities-hint">
+            <button class="activity-ticket" type="button" aria-pressed="false" data-ticket="Квест" data-answer="Пройти виртуальный квест с расследованием">
+              <span class="ticket-icon" aria-hidden="true">🔎</span><span class="ticket-title">Квест-расследование</span><span class="ticket-detail">Распутаем дело онлайн</span>
+            </button>
+            <button class="activity-ticket" type="button" aria-pressed="false" data-answer="Включить сериал без звука и придумать диалоги">
+              <span class="ticket-icon" aria-hidden="true">🎬</span><span class="ticket-title">Озвучим сериал</span><span class="ticket-detail">Выключим звук и придумаем диалоги</span>
+            </button>
+            <button class="activity-ticket" type="button" aria-pressed="false" data-answer="Поиграть в Wordle">
+              <span class="ticket-icon" aria-hidden="true">🧩</span><span class="ticket-title">Wordle</span><span class="ticket-detail">Угадаем слово вдвоём</span>
+            </button>
+            <button class="activity-ticket" type="button" aria-pressed="false" data-answer="Поиграть в WoW и LoL">
+              <span class="ticket-icon" aria-hidden="true">🎮</span><span class="ticket-title">WoW и LoL</span><span class="ticket-detail">Зайдём поиграть вместе</span>
+            </button>
+            <button class="activity-ticket" type="button" aria-pressed="false" data-answer="Приготовить что-нибудь вместе">
+              <span class="ticket-icon" aria-hidden="true">🍳</span><span class="ticket-title">Готовим вместе</span><span class="ticket-detail">Один рецепт на две кухни</span>
+            </button>
+            <button class="activity-ticket" type="button" aria-pressed="false" data-answer="Почитать и обсудить Reddit или Threads">
+              <span class="ticket-icon" aria-hidden="true">💬</span><span class="ticket-title">Reddit или Threads</span><span class="ticket-detail">Почитаем и обсудим посты</span>
+            </button>
+            <button class="activity-ticket" type="button" aria-pressed="false" data-answer="Начать смотреть дораму «Идеальная работа»">
+              <span class="ticket-icon" aria-hidden="true">🍿</span><span class="ticket-title">Идеальная работа</span><span class="ticket-detail">Первая серия дорамы</span>
+            </button>
+            <button class="activity-ticket" type="button" aria-pressed="false" data-answer="Поиграть в Split Fiction">
+              <span class="ticket-icon" aria-hidden="true">🛸</span><span class="ticket-title">Split Fiction</span><span class="ticket-detail">Приключение на двоих</span>
+            </button>
+          </div>
+          <div class="activity-pocket">
+            <h3>Наши билеты</h3>
+            <ol id="ticket-slots" aria-label="Билеты в плане"><li>Свободно</li><li>Свободно</li><li>Свободно</li></ol>
+          </div>
+          <div class="activity-actions">
+            <button class="primary" type="submit" id="view-activities" disabled>Посмотреть выбор<svg aria-hidden="true"><use href="#arrow"/></svg></button>
+            <p id="activity-count" role="status">0 из 3 билетов</p>
+          </div>
+        </form>
+      </section>
+
+      <section class="accepted" id="accepted" aria-labelledby="accepted-title" hidden>
+        <span class="basil-art basil-art--happy" role="img" aria-label="Basil поднял лапки"></span>
+        <h2 id="accepted-title" tabindex="-1">Вот наш план</h2>
+        <ul id="selected-activities" class="selected-activities"></ul>
+        <div class="summary-actions">
+          <button class="primary" id="copy-activities">Скопировать выбор</button>
+          <button class="text-button" id="edit-activities">Изменить выбор</button>
+        </div>
+        <p class="copy-status" id="copy-status" role="status"></p>
+        <div class="activity-answer" id="activity-answer" hidden>
+          <label for="activity-message">Ответ для чата</label>
+          <textarea id="activity-message" readonly rows="6"></textarea>
+        </div>
+      </section>
+
+      <footer class="paper-footer"><span>Из моего сердца — в твоё.</span><svg aria-hidden="true"><use href="#heart"/></svg><span>Расстояние письмам не помеха.</span></footer>
+    </main>
+    <footer class="page-footer"><a href="https://linktr.ee/basiilleaf">Котята нарисованы BasiilLeaf</a></footer>
+  </div>
+  <div class="heart-shower" id="heart-shower" aria-hidden="true"></div>
+  <noscript><p class="no-script">Любимая, приглашаю тебя провести нашу годовщину 12 ноября вместе по видеосвязи. Время выберем вместе.</p></noscript>
+  <script src="app.js"></script>
+</body>
+</html>
