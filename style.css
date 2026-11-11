@@ -489,51 +489,99 @@ body {
   background-size: 460px;
 }
 
-.love-stamp {
+.cover-card {
   position: absolute;
-  z-index: 1;
-  top: -10px;
-  right: 0;
-  display: flex;
-  width: 122px;
-  min-height: 86px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 6px;
-  padding: 9px;
-  border: 1px dashed #b87b6f;
-  border-radius: 12px;
-  background: #f7dad1;
-  color: #755046;
-  font: 400 24px/1.05 var(--hand);
-  text-align: center;
-  transform: rotate(8deg);
+  display: block;
+  height: auto;
+  border: 5px solid #fffdf8;
+  border-bottom-width: 10px;
+  border-radius: 4px;
+  box-shadow: 1px 5px 12px #65463b27;
   pointer-events: none;
 }
 
-.love-stamp svg {
-  width: 19px;
-  height: 19px;
-  fill: #b7665f;
+.cover-card--royal {
+  top: 7%;
+  left: 2%;
+  width: clamp(80px, 8.5vw, 122px);
+  transform: rotate(-12deg);
+}
+
+.cover-card--envelope {
+  top: 3%;
+  right: 3%;
+  width: clamp(88px, 9vw, 130px);
+  transform: rotate(12deg);
+}
+
+.cover-card--mountains {
+  right: 1%;
+  bottom: 6%;
+  width: clamp(96px, 10vw, 144px);
+  transform: rotate(-8deg);
+}
+
+.illustration-area .delivery-note {
+  right: auto;
+  bottom: 4%;
+  left: 9%;
 }
 
 @media (max-width: 800px) {
-  body {
-    background-size: 320px;
+  .illustration-area {
+    height: 385px;
   }
 
-  .love-stamp {
-    top: -9px;
-    right: -2px;
-    width: 95px;
-    min-height: 65px;
-    gap: 4px;
-    font-size: 19px;
+  .illustration-area .cat-button {
+    margin-bottom: 20px;
   }
 
-  .love-stamp svg {
-    width: 15px;
-    height: 15px;
+  .cover-card--royal {
+    top: 2%;
+    left: 3%;
+    width: 80px;
+  }
+
+  .cover-card--envelope {
+    top: 1%;
+    right: 4%;
+    width: 88px;
+  }
+
+  .cover-card--mountains {
+    right: 1%;
+    bottom: 7%;
+    width: 103px;
+  }
+
+  .illustration-area .delivery-note {
+    bottom: 5%;
+    left: 4%;
+  }
+}
+
+@media (max-width: 450px) {
+  .illustration-area {
+    height: 362px;
+  }
+
+  .cover-card {
+    border-width: 4px 4px 8px;
+  }
+
+  .cover-card--royal {
+    width: 71px;
+  }
+
+  .cover-card--envelope {
+    width: 77px;
+  }
+
+  .cover-card--mountains {
+    width: 92px;
+  }
+
+  .illustration-area .delivery-note {
+    left: 0;
   }
 }
