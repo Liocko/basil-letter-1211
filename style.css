@@ -521,15 +521,28 @@ body {
   transform: rotate(-8deg);
 }
 
+.cover-card--duo {
+  bottom: 7%;
+  left: 2%;
+  width: clamp(90px, 9vw, 130px);
+  transform: rotate(9deg);
+}
+
 .illustration-area .delivery-note {
   right: auto;
-  bottom: 4%;
-  left: 9%;
+  bottom: -12px;
+  left: 50%;
+  width: max-content;
+  transform: translateX(-50%) rotate(-6deg);
+}
+
+.illustration-area .delivery-note > svg {
+  width: 44px;
 }
 
 @media (max-width: 800px) {
   .illustration-area {
-    height: 385px;
+    height: 405px;
   }
 
   .illustration-area .cat-button {
@@ -550,19 +563,24 @@ body {
 
   .cover-card--mountains {
     right: 1%;
-    bottom: 7%;
+    bottom: 12%;
     width: 103px;
   }
 
+  .cover-card--duo {
+    bottom: 12%;
+    left: 3%;
+    width: 90px;
+  }
+
   .illustration-area .delivery-note {
-    bottom: 5%;
-    left: 4%;
+    bottom: 0;
   }
 }
 
 @media (max-width: 450px) {
   .illustration-area {
-    height: 362px;
+    height: 388px;
   }
 
   .cover-card {
@@ -581,7 +599,11 @@ body {
     width: 92px;
   }
 
-  .illustration-area .delivery-note {
-    left: 0;
+  .cover-card--duo {
+    width: 79px;
+  }
+
+  .illustration-area .delivery-note > svg {
+    width: 34px;
   }
 }
