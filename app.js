@@ -114,3 +114,38 @@ document.querySelector('#copy-activities').addEventListener('click', async () =>
     message.select();
   }
 });
+
+const wordTicker = document.querySelector('.word-ticker');
+const tickerTrack = wordTicker.querySelector('.ticker-track');
+const tickerWords = wordTicker.querySelector('.ticker-words');
+const tickerToggle = wordTicker.querySelector('.ticker-toggle');
+const tickerCopy = tickerWords.cloneNode(true);
+tickerCopy.classList.add('ticker-copy');
+tickerCopy.setAttribute('aria-hidden', 'true');
+tickerTrack.append(tickerCopy);
+wordTicker.classList.add('is-moving');
+tickerToggle.hidden = false;
+
+tickerToggle.addEventListener('click', () => {
+  const paused = wordTicker.classList.toggle('is-paused');
+  tickerToggle.textContent = paused ? 'Продолжить' : 'Пауза';
+});
+
+const photoStack = document.querySelector('.photo-stack');
+const photoPrints = [...photoStack.querySelectorAll('.photo-print')];
+const photoCount = photoStack.querySelector('.photo-stack-count');
+const photoStatus = document.querySelector('#photo-stack-status');
+let currentPhoto = 0;
+let leavingPhoto;
+
+photoStack.addEventListener('click', () => {
+  leavingPhoto?.classList.remove('is-leaving');
+  leavingPhoto = photoPrints[currentPhoto];
+  leavingPhoto.classList.replace('is-current', 'is-leaving');
+
+  currentPhoto = (currentPhoto + 1) % photoPrints.length;
+  const nextPhoto = photoPrints[currentPhoto];
+  nextPhoto.classList.add('is-current');
+  photoCount.textContent = `${currentPhoto + 1} / ${photoPrints.length}`;
+  photoStatus.textContent = `Фото ${currentPhoto + 1} из ${photoPrints.length}. ${nextPhoto.alt}`;
+});

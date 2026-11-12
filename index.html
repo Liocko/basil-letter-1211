@@ -9,7 +9,7 @@
   <title>Тебе, с любовью · 12 ноября</title>
   <link rel="icon" href="assets/heart.svg" type="image/svg+xml">
   <link rel="preload" href="assets/neucha.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="style.css?v=postcards-4">
+  <link rel="stylesheet" href="style.css?v=photo-stack">
 </head>
 <body>
   <svg class="icon-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -28,10 +28,10 @@
     <main class="stationery" id="invitation">
       <section class="cover" id="cover" aria-labelledby="cover-title">
         <div class="cover-copy">
-          <h1 id="cover-title">Ты рядом.<br>Даже издалека.</h1>
-          <p class="intro">12 ноября — наша годовщина.<br>И я хочу провести этот день с тобой,<br class="desktop-break"> сколько бы километров ни было между нами.</p>
+          <h1 id="cover-title">Твоё теплышко<br>Всегда греет внутри</h1>
+          <p class="intro">С годовщиной тебя, любимая!<br>Спасибо тебе что ты всегда рядом...<br class="desktop-break"></p>
           <button class="primary" id="open-letter" aria-controls="letter" aria-expanded="false"><svg aria-hidden="true"><use href="#mail"/></svg>Открыть письмо</button>
-          <span class="small-note">одно маленькое письмо. много любви.</span>
+          <span class="small-note">Миска подготовил интерактивную отклытотьку!</span>
         </div>
 
         <div class="illustration-area">
@@ -50,14 +50,27 @@
         <button class="text-button back-button" id="close-letter"><svg aria-hidden="true"><use href="#back"/></svg>К конверту</button>
         <div class="letter-layout">
           <div class="letter-content">
-            <h2 id="letter-title" tabindex="-1">Любимая,</h2>
-            <p>Я бы хотел сейчас просто оказаться рядом. Обнять тебя и сказать всё это без экрана между нами.</p>
-            <p>Но 12 ноября — наш день. Поэтому давай всё равно проведём его вместе: созвонимся, закажем что-нибудь вкусное и оставим этот вечер только для нас.</p>
-            <p>Можно смотреть фильм. Можно говорить обо всём. Можно просто быть рядом, каждый по свою сторону экрана.</p>
+            <h2 id="letter-title" tabindex="-1">Мой котёнок Олечка,</h2>
+            <p>Спасибо тебе за твою теплоту, твою заботу, твою поддержку...</p>
+            <p>Всё это время, несмотря на тысячи километров между нами, я всегда чувствую твоё теплышко, всегда чувствую, что ти рядышком.</p>
+            <p>Я ценю каждый миг, проведённый вместе, каждый момент, каждое воспоминание... Спасибо тебе... За всё...</p>
             <p class="letter-signature">Главное — с тобой.</p>
             <div class="letter-actions"><button class="primary" id="open-activities">Выбрать, чем займёмся<svg aria-hidden="true"><use href="#arrow"/></svg></button></div>
           </div>
-          <aside class="letter-illustration"><span class="basil-art basil-art--writing" role="img" aria-label="Basil рисует карандашом"></span></aside>
+          <aside class="letter-illustration">
+            <button class="photo-stack" type="button" aria-label="Следующее фото" aria-describedby="photo-stack-status">
+              <span class="photo-stack-stage" aria-hidden="true">
+                <img class="photo-print is-current" src="assets/letter-photo.jpg" alt="Мы целуемся у воды на закате" width="1000" height="750">
+                <img class="photo-print" src="assets/letter-photo-02.jpg" alt="Мы обнимаемся у воды в солнечный день" width="1050" height="788">
+                <img class="photo-print" src="assets/letter-photo-03.jpg" alt="Наше селфи на фоне плаката Welcome to Korea" width="1050" height="788">
+                <img class="photo-print photo-print--portrait" src="assets/letter-photo-04.jpg" alt="Наше селфи в поездке" width="787" height="1050">
+                <img class="photo-print photo-print--portrait" src="assets/letter-photo-05.jpg" alt="Мы отдыхаем с дорожными подушками" width="787" height="1050">
+                <img class="photo-print photo-print--portrait" src="assets/letter-photo-06.jpg" alt="Наше селфи под снегом" width="787" height="1050">
+              </span>
+              <span class="photo-stack-caption" aria-hidden="true">Листай фото <svg><use href="#arrow"/></svg><span class="photo-stack-count">1 / 6</span></span>
+            </button>
+            <span class="photo-stack-status" id="photo-stack-status" role="status">Фото 1 из 6. Мы целуемся у воды на закате</span>
+          </aside>
         </div>
       </section>
 
@@ -65,7 +78,7 @@
         <button class="text-button back-button" id="activities-back"><svg aria-hidden="true"><use href="#back"/></svg>К письму</button>
         <div class="activities-heading">
           <div>
-            <h2 id="activities-title" tabindex="-1">Чем займёмся вместе?</h2>
+            <h2 id="activities-title" tabindex="-1">Для котёнка спец задание!</h2>
             <p id="activities-hint">Собери до трёх билетов на 12 ноября. Нажми ещё раз, чтобы вернуть билет.</p>
           </div>
           <span class="basil-art basil-art--laptop" role="img" aria-label="Basil у ноутбука"></span>
@@ -123,12 +136,42 @@
         </div>
       </section>
 
-      <footer class="paper-footer"><span>Из моего сердца — в твоё.</span><svg aria-hidden="true"><use href="#heart"/></svg><span>Расстояние письмам не помеха.</span></footer>
+      <footer class="paper-footer word-ticker">
+        <div class="ticker-window" id="footer-words" tabindex="0" aria-label="Наши словечки">
+          <div class="ticker-track">
+            <ul class="ticker-words" role="list">
+              <li>Абуф</li>
+              <li>Копик</li>
+              <li>Атобуф</li>
+              <li>Питомиц</li>
+              <li>Нагиц</li>
+              <li>Смысленыс</li>
+              <li>Нисмысленыс</li>
+              <li>Фупик</li>
+              <li>Апиуки</li>
+              <li>Тотик</li>
+              <li>Лыбеска</li>
+              <li>Здох!</li>
+              <li>Профессиональный тупица</li>
+              <li>Сюпис</li>
+              <li>Мыца</li>
+              <li>Ванять</li>
+              <li>Хало кетте</li>
+              <li>Помпомпомпомпомпулин</li>
+              <li>Бугиу</li>
+              <li>Гавёшка</li>
+              <li>Засыбись</li>
+              <li>Кыса</li>
+            </ul>
+          </div>
+        </div>
+        <button class="ticker-toggle" type="button" aria-controls="footer-words" hidden>Пауза</button>
+      </footer>
     </main>
     <footer class="page-footer"><a href="https://linktr.ee/basiilleaf">Котята нарисованы BasiilLeaf</a></footer>
   </div>
   <div class="heart-shower" id="heart-shower" aria-hidden="true"></div>
   <noscript><p class="no-script">Любимая, приглашаю тебя провести нашу годовщину 12 ноября вместе по видеосвязи. Время выберем вместе.</p></noscript>
-  <script src="app.js"></script>
+  <script src="app.js?v=photo-stack"></script>
 </body>
 </html>
